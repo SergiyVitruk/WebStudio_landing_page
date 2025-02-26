@@ -52,6 +52,83 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu-container container">
+          <button class="mobile-menu-close" data-menu-close>
+            <svg class="close-mobile-menu-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-item">
+                <a href="./index.html" class="mobile-nav-item-link current-link"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-nav-item">
+                <a href="" class="mobile-nav-item-link">Portfolio</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a href="" class="mobile-nav-item-link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address>
+            <ul class="mobile-menu-address">
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu-contacts mobile-menu-email"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+110001111111" class="mobile-menu-contacts"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mobile-menu-social-list-container">
+            <ul class="mobile-menu-social-list">
+              <li class="mobile-menu-social-item">
+                <a href="" class="mobile-menu-social-link">
+                  <svg class="mobile-menu-link-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-list-items">
+                <a href="" class="mobile-menu-social-link">
+                  <svg class="mobile-menu-link-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-list-items">
+                <a href="" class="mobile-menu-social-link">
+                  <svg class="mobile-menu-link-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-list-items">
+                <a href="" class="mobile-menu-social-link">
+                  <svg class="mobile-menu-link-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -62,7 +139,7 @@
         </div>
       </section>
       <section class="advantage-section section">
-        <div class="container advantage-container">
+        <div class="container">
           <h2 class="visually-hidden">HIDE</h2>
           <ul class="advantage-list">
             <li class="advantage-list-item">
@@ -295,7 +372,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section class="section hidden">
         <div class="container portfolio-container">
           <h2 class="second-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -417,7 +494,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer-background">
+    <footer class="footer-background hidden">
       <div class="container footer-design">
         <div class="footer-inform">
           <a href="./index.html" class="logo foot-logo"
@@ -481,7 +558,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay hidden">
       <div class="modal">
         <button class="close-form-btn" type="button">
           <svg class="close-form-icon" width="8" height="8">
@@ -540,8 +617,7 @@
               name="user-comment"
               id="user-comment"
               placeholder="Text input"
-            >
-            </textarea>
+            ></textarea>
           </div>
           <div class="pp-checkbox">
             <input
@@ -564,5 +640,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
