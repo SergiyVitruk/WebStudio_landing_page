@@ -778,9 +778,8 @@ button {
 }
 
 .foot-logo {
-    display: inline-block;
-    margin-bottom: 16px;
     display: flex;
+    margin-bottom: 16px;
     justify-content: center;
 }
 
@@ -792,12 +791,10 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
-    
 }
 
 .footer-text {
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
@@ -819,13 +816,13 @@ button {
 }
 
 .social-links-list-items {
+    display: flex;
     width: 40px;
     height: 40px;
 }
 
 .social-link-footer {
-    width: 100%;
-    height: 100%;
+    padding: 8px;
 }
 
 .subscribe-txt {
@@ -837,6 +834,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
 }
 
 .email-subscribe {
@@ -844,7 +842,7 @@ button {
     font-size: 12px;
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 288px;
+    min-width: 288px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent;
@@ -853,7 +851,6 @@ button {
     padding: 8px auto;
     padding-left: 16px;
     opacity: 0.3;
-    margin-bottom: 16px;
 }
 
 .email-subscribe::placeholder {
@@ -885,12 +882,12 @@ button {
 
 @media screen and (min-width: 768px) {
     .footer-background {
-        padding-left: 92px;
+        padding: 96px 148px 96px 92px;
     }
 
     .footer-design {
         gap: 72px 24px;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 
     .footer-inform {
@@ -904,51 +901,36 @@ button {
     .footer-links-txt {
         text-align: start;
     }
-
+    
     .subscribe-form {
         display: flex;
         flex-direction: row;
         gap: 24px;
-        align-items: baseline;
+        align-items: center;
         margin-bottom: 0;
     }
 
     .email-subscribe {
-        width: 264px;
+        min-width: 264px;
     }
 
     .social-link-footer:hover,
     .social-link-footer:focus {
-            background-color: #31d0aa;
+        background-color: #31d0aa;
     }
 }
 
-
-/* не працюючий падінг */
-
 @media screen and (min-width: 1158px) {
-    .footer-background {
-        padding-left: 0;
+    footer.footer-background {
+        padding: 100px 0;
     }
 
-    .footer-design {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-
-    .footer-inform {
-        padding-left: 0;
-        margin-right: 120px;
-        display: flex;
-        flex-direction: column;
-        max-width: 264px;
+    .email-subscribe {
+        opacity: 1;
     }
 }
 
 /* #endregion footer style */
-
 
 /* #region modal style */
 
@@ -977,9 +959,9 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* min-height: 623px; */
+    height: 95%;
+    width: 90%;
     transform: translate(-50%, -50%);
-    width: 288px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #fcfcfc;
     border-radius: 4px;
@@ -1005,23 +987,11 @@ button {
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 24px;
-}
-
-.close-form-btn:hover,
-.close-form-btn:focus {
-    background-color: #404bbf;
-    border: none;
 }
 
 .close-form-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: #2e2f42;
-}
-
-.close-form-btn:hover .close-form-icon,
-.close-form-btn:focus .close-form-icon {
-    fill: #ffffff;
 }
 
 .fb-form-txt {
@@ -1036,7 +1006,6 @@ button {
 .fb-form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
     gap: 8px;
 }
 
@@ -1062,22 +1031,10 @@ button {
 
 .form-box {
     position: relative;
-    margin-bottom: 8px;
 }
 
 .input-box {
     position: relative;
-}
-
-.form-input-design:hover+svg,
-.form-input-design:focus+svg {
-    fill: #4d5ae5;
-}
-
-.form-input-design:hover,
-.form-input-design:focus,
-.form-input-design:focus-within {
-    border-color: #4D5AE5;
 }
 
 .input-icon {
@@ -1090,7 +1047,7 @@ button {
 }
 
 .textarea-box {
-    margin-bottom: 16px;
+
 }
 
 .form-input-comment {
@@ -1109,14 +1066,8 @@ button {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input-comment:hover,
-.form-input-comment:focus,
-.form-input-comment:focus-within {
-    border-color: #4D5AE5;
-}
-
 .pp-checkbox {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .user-privacy {
@@ -1124,6 +1075,8 @@ button {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: flex;
+    align-items: center;
 }
 
 .policy-design {
@@ -1137,6 +1090,7 @@ button {
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .check-design:checked+label>span {
@@ -1154,7 +1108,9 @@ button {
 
 .submit-fb-btn {
     display: block;
-    min-width: 169px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
     font-style: 16px;
@@ -1166,18 +1122,45 @@ button {
     background-color: #4d5ae5;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    align-self: center;
 }
+
 
 
 @media screen and (min-width: 768px) {
-    .footer-background {
-        padding-left: 92px;
+    .modal {
+        max-height: 584px;
+        width: 408px;
+        padding: 72px 24px 24px 24px;
+    }
+
+    .close-form-btn:hover,
+    .close-form-btn:focus {
+        background-color: #404bbf;
+        border: none;
+    }
+    
+    .close-form-btn:hover .close-form-icon,
+    .close-form-btn:focus .close-form-icon {
+        fill: #ffffff;
+    }
+    
+    .form-input-design:hover+svg,
+    .form-input-design:focus+svg {
+        fill: #4d5ae5;
+    }
+    
+    .form-input-design:hover,
+    .form-input-design:focus,
+    .form-input-design:focus-within {
+        border-color: #4D5AE5;
+    }
+    
+    .form-input-comment:hover,
+    .form-input-comment:focus,
+    .form-input-comment:focus-within {
+        border-color: #4D5AE5;
     }
 }
 
-
-@media screen and (min-width: 1158px) {
-    .footer-background {
-
-    }
-}
+/* #endregion modal style */
